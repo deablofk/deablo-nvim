@@ -1,5 +1,6 @@
-# DiabloNVIM
+# Deablo-NVIM
 ![image](https://github.com/deablofk/deablo-nvim/assets/51531895/1ae94c99-da52-469a-b0c5-f38f6102291c)
+*text font: Iosevka*
 
 ## Description
 Welcome to my customized Neovim configuration tailored for efficient Java and Scala development. While optimized for these languages, this configuration is versatile and can be easily adapted for other programming languages according to your preferences.
