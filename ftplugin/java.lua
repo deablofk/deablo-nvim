@@ -25,6 +25,13 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 -- LSP handler
 local handler = require('lsp_handler')
 
+-- DAP
+local bundles = {
+	vim.fn.glob("$MASON/share/java-debug-adapter/com.microsoft.java.debug.plugin-*.jar",
+		1),
+}
+vim.list_extend(bundles, vim.split(vim.fn.glob("$MASON/share/java-test/*.jar", 1), "\n"))
+
 -- LSP configuration (jdtls)
 local config = {
 	cmd = {
@@ -83,8 +90,14 @@ local config = {
 		}
 	},
 	capabilities = capabilities,
-	on_attach = handler.on_attach,
-	init_options = { bundles = {} },
+	on_attach = function(_, bufnr)
+		handler.on_attach(_, bufnr)
+		require('jdtls').setup_dap()
+		handler.jdtls_dap(_, bufnr)
+	end,
+	init_options = {
+		bundles = bundles,
+	}
 }
 
 require('jdtls').start_or_attach(config)

@@ -12,6 +12,8 @@ M.plugins = {
 	{ 'scalameta/nvim-metals' },
 	{ 'ray-x/lsp_signature.nvim' },
 	{ 'https://gitlab.com/schrieveslaach/sonarlint.nvim' },
+	{ 'mfussenegger/nvim-dap' },
+	{ 'rcarriga/nvim-dap-ui' },
 
 	-- FORMATTING, DIAGNOSTIC, ETC
 	{ 'jose-elias-alvarez/null-ls.nvim' },

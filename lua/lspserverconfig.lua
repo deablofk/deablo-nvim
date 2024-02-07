@@ -3,6 +3,9 @@ local formatters = {
 	'prettier',
 	'black',
 	'sonarlint-language-server',
+	-- debuggers
+	'java-debug-adapter',
+	'java-test',
 }
 
 local servers = {
