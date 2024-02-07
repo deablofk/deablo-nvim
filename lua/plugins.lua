@@ -51,6 +51,7 @@ M.plugins = {
 
 	-- GIT
 	{ 'lewis6991/gitsigns.nvim' },
+	{ "kdheepak/lazygit.nvim" },
 
 	-- FOLDER TREE
 	{ 'nvim-tree/nvim-tree.lua' },
