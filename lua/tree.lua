@@ -25,6 +25,7 @@ require 'nvim-tree'.setup {
 local highlights = {
 	NvimTreeFolderName = { fg = '#ffdd33' },
 	NvimTreeOpenedFolderName = {fg = '#ffdd33'  },
+	NvimTreeEmptyFolderName = {fg = '#ffdd33'},
 	NvimTreeFolderIcon = { fg = '#cc8c3c' },
 }
 
