@@ -123,6 +123,15 @@ require 'nvim-treesitter.configs'.setup {
 	},
 }
 
+-- ILLUMINATE
+require 'illuminate'.configure({
+	providers = {
+		'treesitter',
+		'lsp',
+	},
+	delay = 730,
+})
+
 local highlights = {
 	IlluminatedWord = { bg = '#96A6C8', fg = '#E4E4E4' },
 	IlluminatedCurWord = { bg = '#96A6C8', fg = '#E4E4E4' },

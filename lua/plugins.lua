@@ -48,6 +48,7 @@ M.plugins = {
 	{ 'brenoprata10/nvim-highlight-colors' },
 	{ 'karb94/neoscroll.nvim' },
 	{ 'folke/which-key.nvim' },
+	{ 'RRethy/vim-illuminate' },
 
 	-- GIT
 	{ 'lewis6991/gitsigns.nvim' },
