@@ -24,6 +24,5 @@ Follow these simple steps to set up the enhanced Neovim configuration:
 
 ## TODO
 
-- DAP
 - NvimTree LSP File Operations
 - Implement ultimate auto-pair on default mode (delete key)
