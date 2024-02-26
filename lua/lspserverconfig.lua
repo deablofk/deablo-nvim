@@ -21,6 +21,8 @@ local servers = {
 	'lua_ls',
 	'svelte',
 	'tsserver',
+	'kotlin_language_server',
+	'ols',
 }
 
 require 'neodev'.setup()
