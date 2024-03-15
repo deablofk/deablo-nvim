@@ -9,7 +9,6 @@ local formatters = {
 }
 
 local servers = {
-	'clangd',
 	'gopls',
 	'pyright',
 	'rust_analyzer',
@@ -21,7 +20,7 @@ local servers = {
 	'lua_ls',
 	'svelte',
 	'tsserver',
-	'kotlin_language_server',
+	'ast_grep',
 	'ols',
 }
 
