@@ -32,7 +32,7 @@ M.plugins = {
 	{ 'L3MON4D3/LuaSnip' },
 	{ 'saadparwaiz1/cmp_luasnip' },
 	{ 'rafamadriz/friendly-snippets' },
-	{ 'altermo/ultimate-autopair.nvim' },
+	{ 'windwp/nvim-autopairs' },
 
 	--FUZZY FINDER
 	{ 'nvim-telescope/telescope.nvim' },
@@ -70,6 +70,9 @@ M.plugins = {
 
 	-- DISCORD
 	{ 'andweeb/presence.nvim' },
+
+	-- SPRING BOOT JAVA
+	{ 'javiorfo/nvim-springtime' },
 }
 
 return M
