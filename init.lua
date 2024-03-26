@@ -61,7 +61,6 @@ local modules = {
     'signature',
     'keymaps',
     'highlight',
-    'curlrest',
     'discord',
     'finder',
 }
