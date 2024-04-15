@@ -44,11 +44,12 @@ M.plugins = {
 	{ 'lukas-reineke/indent-blankline.nvim' },
 	{ 'norcalli/nvim-colorizer.lua' },
 	{ 'nvim-lualine/lualine.nvim' },
-	{ 'deablofk/gruber-darker.nvim' },
 	{ 'brenoprata10/nvim-highlight-colors' },
 	{ 'karb94/neoscroll.nvim' },
 	{ 'folke/which-key.nvim' },
 	{ 'RRethy/vim-illuminate' },
+	{ 'deablofk/dagruber' },
+	{ 'rktjmp/lush.nvim' },
 
 	-- DATABASE MANAGEMENT
 	{ 'tpope/vim-dadbod' },

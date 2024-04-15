@@ -12,7 +12,7 @@ vim.opt.backup = false
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.o.background = 'dark'
-vim.cmd [[colorscheme gruber-darker]]
+vim.cmd [[colorscheme dagruber]]
 vim.cmd('set signcolumn=auto:1')
 
 local signs = {
