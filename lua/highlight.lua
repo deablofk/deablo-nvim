@@ -3,7 +3,8 @@ require 'ibl'.setup {
 	scope = {
 		enabled = true,
 		show_start = false,
-	}
+	},
+	indent = { char = "│" },
 }
 -- HEXADECIMAL COLORS
 require 'nvim-highlight-colors'.setup {}
@@ -11,11 +12,11 @@ require 'nvim-highlight-colors'.setup {}
 -- GITSIGNS ICONS
 require 'gitsigns'.setup {
 	signs = {
-		add          = { text = '▎' },
-		change       = { text = '▎' },
-		delete       = { text = '󰐊' },
-		topdelete    = { text = '󰐊' },
-		changedelete = { text = '▎' },
+		add          = { text = '│' },
+		change       = { text = '│' },
+		delete       = { text = '├' },
+		topdelete    = { text = '├' },
+		changedelete = { text = '│' },
 		untracked    = { text = '┆' },
 	},
 	sign_priority = 0,
@@ -34,8 +35,8 @@ require 'lualine'.setup {
 			right = '',
 		},
 		section_separators = '',
-		ignore_focus = { 'NvimTree', 'neo-tree' },
-		disabled_filetypes = { 'packer', 'NvimTree', 'neo-tree' }
+		ignore_focus = { 'NvimTree', 'neo-tree', 'dbui' },
+		disabled_filetypes = { 'packer', 'NvimTree', 'neo-tree', 'dbui' }
 	},
 	sections = {
 
@@ -47,6 +48,7 @@ require 'lualine'.setup {
 		lualine_z = {}
 	},
 }
+
 
 -- AUTO FOLDING IMPORTS
 function java_import_folding()
@@ -86,6 +88,9 @@ require 'nvim-treesitter.configs'.setup {
 	},
 	highlight = {
 		enable = true,
+		disable = {
+			"vimdoc"
+		},
 	},
 	indent = {
 		enable = false,
@@ -143,3 +148,8 @@ local highlights = {
 for group, value in pairs(highlights) do
 	vim.api.nvim_set_hl(0, group, value)
 end
+
+-- highlight of vim dadbod-ui
+vim.api.nvim_set_hl(0, "NotificationInfo", { fg = '#FFFFFF', --[[ bg = '#0000FF' ]] })
+vim.api.nvim_set_hl(0, "NotificationWarning", { fg = '#FFFFFF', --[[ bg = '#FFFF00' ]] })
+vim.api.nvim_set_hl(0, "NotificationError", { fg = '#FFFFFF', --[[ bg = '#FF0000' ]] })
