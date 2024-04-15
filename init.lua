@@ -64,6 +64,7 @@ local modules = {
     'highlight',
     'discord',
     'finder',
+    'neovide',
 }
 
 if not firstInstall then
