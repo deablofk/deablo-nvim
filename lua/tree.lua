@@ -3,6 +3,7 @@ require 'nvim-tree'.setup {
 		enable = true,
 	},
 	renderer = {
+		indent_width = 2,
 		icons = {
 			show = {
 				file = false,
@@ -19,13 +20,26 @@ require 'nvim-tree'.setup {
 				},
 			},
 		}
-	}
+	},
+	actions = {
+		use_system_clipboard = true,
+		change_dir = {
+			enable = true,
+			global = false,
+			restrict_above_cwd = false,
+		},
+		open_file = {
+			quit_on_open = false,
+			eject = true,
+			resize_window = true,
+		},
+	},
 }
 
 local highlights = {
 	NvimTreeFolderName = { fg = '#ffdd33' },
-	NvimTreeOpenedFolderName = {fg = '#ffdd33'  },
-	NvimTreeEmptyFolderName = {fg = '#ffdd33'},
+	NvimTreeOpenedFolderName = { fg = '#ffdd33' },
+	NvimTreeEmptyFolderName = { fg = '#ffdd33' },
 	NvimTreeFolderIcon = { fg = '#cc8c3c' },
 }
 
@@ -40,6 +54,7 @@ vim.api.nvim_create_autocmd({ 'VimEnter' }, {
 			require 'nvim-tree.api'.tree.toggle({
 				focus = true,
 			})
+			vim.opt_local.fillchars = "eob: "
 		end
 	end
 })
