@@ -39,3 +39,6 @@ vim.keymap.set('n', '<leader>sd', require 'telescope.builtin'.diagnostics, { des
 
 -- LAZYGIT
 vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { silent = true, desc = '[L]azy [G]it' })
+
+-- DATABASE MANAGEMENT USING DADBOD AND DADBOD-UI
+vim.keymap.set('n', '<leader>db', ':DBUI<CR>', { silent = true, desc = '[D]ad[B]od' })

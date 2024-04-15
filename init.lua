@@ -53,6 +53,7 @@ packer.startup(function(use)
 end)
 
 local modules = {
+    'dadbodcfg',
     'tree',
     'completion',
     'formatting',

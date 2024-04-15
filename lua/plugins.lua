@@ -50,6 +50,10 @@ M.plugins = {
 	{ 'folke/which-key.nvim' },
 	{ 'RRethy/vim-illuminate' },
 
+	-- DATABASE MANAGEMENT
+	{ 'tpope/vim-dadbod' },
+	{ 'kristijanhusak/vim-dadbod-ui' },
+
 	-- GIT
 	{ 'lewis6991/gitsigns.nvim' },
 	{ "kdheepak/lazygit.nvim" },
@@ -70,9 +74,6 @@ M.plugins = {
 
 	-- DISCORD
 	{ 'andweeb/presence.nvim' },
-
-	-- SPRING BOOT JAVA
-	{ 'javiorfo/nvim-springtime' },
 }
 
 return M
