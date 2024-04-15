@@ -66,9 +66,6 @@ M.plugins = {
 	-- ORGANIZATION
 	{ 'vimwiki/vimwiki' },
 
-	-- REST NEOVIM
-	{ 'rest-nvim/rest.nvim' },
-
 	-- INDENTATION
 	{ 'Darazaki/indent-o-matic' },
 	{ 'nvim-treesitter/nvim-treesitter-textobjects',     after = 'nvim-treesitter' },
