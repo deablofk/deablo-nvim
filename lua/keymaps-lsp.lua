@@ -9,7 +9,7 @@ handler.on_attach = function(_, bufnr)
 	end
 
 	nmap('<leader>rn', lspbuf.rename, '[R]e[n]ame')
-	nmap('<leader>ca', lspbuf.code_action, '[C]ode [A]ction')
+	vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { buffer = bufnr, desc = 'Code Action' })
 	nmap('<leader>D', lspbuf.type_definition, 'Type [D]efinition')
 	nmap('<leader>ds', require 'telescope.builtin'.lsp_document_symbols, '[D]ocument [S]ymbols')
 	nmap('<leader>ws', require 'telescope.builtin'.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
@@ -29,16 +29,14 @@ handler.on_attach = function(_, bufnr)
 end
 
 handler.jdtls_dap_keybinds = function(_, bufnr)
-	vim.keymap.set('n', '<leader>df', function() require 'jdtls'.test_class() end,
-		{ buffer = bufnr, desc = "Test Class" })
+	vim.keymap.set('n', '<leader>df', function() require 'jdtls'.test_class() end, { buffer = bufnr, desc = "Test Class" })
 	vim.keymap.set('n', '<leader>dn', function() require 'jdtls'.test_nearest_method() end,
 		{ buffer = bufnr, desc = "Test Nearest Method" })
 	vim.keymap.set('n', "<leader>bb", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", { desc = "Set breakpoint" })
 	vim.keymap.set('n', "<leader>bc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>",
 		{ desc = "Set conditional breakpoint" })
 	vim.keymap.set('n', "<leader>bl",
-		"<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>",
-		{ desc = "Set log point" })
+		"<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>", { desc = "Set log point" })
 	vim.keymap.set('n', '<leader>br', "<cmd>lua require'dap'.clear_breakpoints()<cr>", { desc = "Clear breakpoints" })
 	vim.keymap.set('n', '<leader>ba', '<cmd>Telescope dap list_breakpoints<cr>', { desc = "List breakpoints" })
 	vim.keymap.set('n', "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", { desc = "Continue" })
