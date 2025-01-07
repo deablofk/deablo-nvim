@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
 -- NVIM TREE
 vim.keymap.set("n", "<leader>n", ":NvimTreeFocus<CR>", { desc = "Focus on Nvim Tree", silent = true })
 
@@ -52,4 +49,4 @@ vim.keymap.set("n", "<leader>f", function()
 end, { silent = true, desc = "Format current buffer" })
 
 -- FOR QUITING THE INSERT MODE IN TERMINAL WITH ESC
-vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
+-- vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
