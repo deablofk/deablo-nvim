@@ -12,6 +12,8 @@ return {
 					kts = { "ktfmt" },
 					gradle = { "npm-groovy-lint" },
 					cs = { "csharpier" },
+					yaml = { "yamlfmt" },
+					yml = { "yamlfmt" },
 				},
 			})
 		end,
