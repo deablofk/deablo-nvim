@@ -7,10 +7,8 @@ local servers = {
 	"kotlin_language_server",
 	"lua_ls",
 	"ast_grep",
-	"gopls",
 	"clangd",
 	"pyright",
-	"csharp_ls",
 }
 
 local handler = require("keymaps-lsp")
