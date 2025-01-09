@@ -19,6 +19,7 @@ vim.opt.runtimepath:prepend(lazypath)
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+vim.opt.termguicolors = true
 
 -- INITIALIZE LAZY SETUP, WILL BE REQUIRED FROM ROOT INIT.LUA
 require("lazy").setup({
