@@ -11,6 +11,12 @@ local servers = {
 	"pyright",
 }
 
+local tools = {
+	"sonarlint-language-server",
+	"prettier",
+	"google-java-format"
+}
+
 local handler = require("keymaps-lsp")
 
 return {
@@ -30,6 +36,14 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		config = function()
+			require('mason-tool-installer').setup({
+				ensure_installed = tools
+			})
+		end
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
