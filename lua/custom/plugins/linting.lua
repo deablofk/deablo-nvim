@@ -36,7 +36,7 @@ return {
 						-- vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarpython.jar"),
 					},
 				},
-				filetypes = { "java", "html", "js", "xml", "dockerfile",
+				filetypes = { "java", "html", "js", "ts", "xml", "dockerfile",
 					-- "go",
 					-- "cs",
 					-- "c",

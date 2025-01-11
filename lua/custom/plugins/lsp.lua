@@ -9,6 +9,7 @@ local servers = {
 	"ast_grep",
 	"clangd",
 	"pyright",
+	"ts_ls",
 }
 
 local tools = {
