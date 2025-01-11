@@ -6,6 +6,9 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
+			enabled = function()
+				return vim.bo.buftype ~= "prompt" and vim.b.completion ~= false and vim.bo.filetype ~= "DressingInput"
+			end,
 			keymap = {
 				preset = "enter",
 				cmdline = {
